@@ -16,16 +16,16 @@ h1{
     position:initial;
 }
 
-.tower-one{
+#tower-one{
     width:200px;
     height:400px;
     background-color:green;
     display:inline-block;
-    margin-right:20px;
+    margin-left:20px;
     position:relative;
 }
 
-.tower-two{
+#tower-two{
     width:200px;
     height:400px;
     background-color:red;
@@ -35,12 +35,12 @@ h1{
     position:relative;
 }
 
-.tower-three{
+#tower-three{
     width:200px;
     height:400px;
     background-color:blue;
     display:inline-block;
-    margin-left:20px;
+    margin-right:20px;
     position:relative;
 }
 
@@ -96,4 +96,8 @@ h1{
     left:50px;
     bottom:125px;
     position:absolute;
+}
+
+.selected{
+    border: solid black;
 }
