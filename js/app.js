@@ -43,12 +43,15 @@ $(document).ready(function(){
         var fromTowerChildren = $(fromTowerId).children();
         var fromTowerDiskNumber = $(fromTowerChildren[0]).text();
 
+        var bottomPixels = toTowerChildren.length * 25;
+
         if(diskNumber < toTowerDiskNumber || diskNumber < fromTowerDiskNumber){
             alert('illegal move');
         } else{
             $(toTower).prepend(disk);
+            disk.css('bottom', bottomPixels);
             moveCount++;
-            console.log('Move Count ' + moveCount);
+            $('#move-count').text('Move Count: ' + moveCount);
         }
 
 
