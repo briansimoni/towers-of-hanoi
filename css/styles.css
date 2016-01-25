@@ -44,11 +44,56 @@ h1{
     position:relative;
 }
 
-.disk{
+.disk-one{
     height:20px;
     width:200px;
     background-color:lightslategray;
     left:0px;
     bottom:0px;
+    position:absolute;
+}
+
+.disk-two{
+    height:20px;
+    width:180px;
+    background-color:lightslategray;
+    left:10px;
+    bottom:25px;
+    position:absolute;
+}
+
+.disk-three{
+    height:20px;
+    width:160px;
+    background-color:lightslategray;
+    left:20px;
+    bottom:50px;
+    position:absolute;
+}
+
+.disk-four{
+    height:20px;
+    width:140px;
+    background-color:lightslategray;
+    left:30px;
+    bottom:75px;
+    position:absolute;
+}
+
+.disk-five{
+    height:20px;
+    width:120px;
+    background-color:lightslategray;
+    left:40px;
+    bottom:100px;
+    position:absolute;
+}
+
+.disk-six{
+    height:20px;
+    width:100px;
+    background-color:lightslategray;
+    left:50px;
+    bottom:125px;
     position:absolute;
 }
