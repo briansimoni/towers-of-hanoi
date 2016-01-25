@@ -96,6 +96,51 @@ h1{
     position:absolute;
 }
 
+.disk-seven{
+    height:20px;
+    width:80px;
+    background-color:lightslategray;
+    left:60px;
+    bottom:150px;
+    position:absolute;
+}
+
+.disk-eight{
+    height:20px;
+    width:60px;
+    background-color:lightslategray;
+    left:70px;
+    bottom:175px;
+    position:absolute;
+}
+
+.disk-nine{
+    height:20px;
+    width:50px;
+    background-color:lightslategray;
+    left:75px;
+    bottom:200px;
+    position:absolute;
+}
+
+.disk-ten{
+    height:20px;
+    width:30px;
+    background-color:lightslategray;
+    left:80px;
+    bottom:225px;
+    position:absolute;
+}
+
+.disk-eleven{
+    height:20px;
+    width:10px;
+    background-color:lightslategray;
+    left:90px;
+    bottom:250px;
+    position:absolute;
+}
+
 .selected{
     border: solid black;
 }
