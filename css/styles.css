@@ -5,8 +5,6 @@ h1{
 .container{
     border-style: solid;
     border-color: black;
-    text-align:center;
-    position:initial;
 }
 
 .towers-container{
