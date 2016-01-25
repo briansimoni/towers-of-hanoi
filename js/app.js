@@ -3,6 +3,9 @@
  */
 
 $(document).ready(function(){
+    var optimalMoveCount = Math.pow(2, ($('#tower-one').children().length) ) - 1;
+    $('#optimal-count').text('Optimal number of moves: ' + optimalMoveCount);
+
 
     var moveCount = 0;
     // add and remove the selected class on click
@@ -55,6 +58,35 @@ $(document).ready(function(){
         }
 
 
+    }
+
+
+    //autoSolve
+    // uses a recursive algorithm
+    $('#auto-solve').click(function(){
+
+        var disk = $('#tower-one').children().length;
+
+        var one = $('#tower-one');
+        var two = $('#tower-two');
+        var three= $('#tower-three')
+
+        hanoi(disk, one, two,three);
+
+        function hanoi( disk, src, aux, dst){
+            if(disk > 0){
+                hanoi(disk -1, src, dst, aux);
+                moveDisk( getDisk($(src)), $(src), $(dst) );
+                hanoi(disk -1, aux, src, dst);
+            }
+        }
+
+    });
+
+
+    function getDisk(tower){
+        var towerDisks = tower.children();
+        return $(towerDisks[0]);
     }
 
 });

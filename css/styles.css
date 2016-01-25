@@ -99,3 +99,7 @@ h1{
 .selected{
     border: solid black;
 }
+
+#optimal-count{
+    float:right;
+}
