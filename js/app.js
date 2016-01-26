@@ -48,12 +48,12 @@ $(document).ready(function(){
         // the next three lines get the disk number of the top disk on the clicked tower
         var toTowerId = '#' + $(toTower).attr('id');
         var toTowerChildren = $(toTowerId).children();
-        var toTowerDiskNumber = $(toTowerChildren[0]).text();
+        var toTowerDiskNumber = Number($(toTowerChildren[0]).text());
 
         // the next three lines get the disk number of the top disk on the from tower
         var fromTowerId = '#' + $(fromTower).attr('id');
         var fromTowerChildren = $(fromTowerId).children();
-        var fromTowerDiskNumber = $(fromTowerChildren[0]).text();
+        var fromTowerDiskNumber = Number($(fromTowerChildren[0]).text());
 
         var bottomPixels = toTowerChildren.length * 25;
 
