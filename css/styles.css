@@ -137,8 +137,53 @@ h1{
     height:20px;
     width:10px;
     background-color:lightslategray;
-    left:100px;
+    left:95px;
     bottom:250px;
+    position:absolute;
+}
+
+.disk-twelve{
+    height:20px;
+    width:5px;
+    background-color:lightslategray;
+    left:100px;
+    bottom:275px;
+    position:absolute;
+}
+
+.disk-thirteen{
+    height:20px;
+    width:5px;
+    background-color:lightslategray;
+    left:100px;
+    bottom:300px;
+    position:absolute;
+}
+
+.disk-fourteen{
+    height:20px;
+    width:5px;
+    background-color:lightslategray;
+    left:100px;
+    bottom:325px;
+    position:absolute;
+}
+
+.disk-fifteen{
+    height:20px;
+    width:5px;
+    background-color:lightslategray;
+    left:100px;
+    bottom:350px;
+    position:absolute;
+}
+
+.disk-sixteen{
+    height:20px;
+    width:5px;
+    background-color:lightslategray;
+    left:100px;
+    bottom:375px;
     position:absolute;
 }
 

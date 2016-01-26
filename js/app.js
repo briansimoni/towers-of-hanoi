@@ -103,7 +103,7 @@ $(document).ready(function(){
         $('.disk').remove();
 
         var numbers = ['one','two','three','four','five','six','seven','eight',
-            'nine','ten','eleven'];
+            'nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen'];
 
         for(var i =0; i < numDisks; i ++){
             $('#tower-one').prepend('<div class="disk disk-' + numbers[i] + '">'+ (i + 1) +'</div>');
