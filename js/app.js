@@ -6,6 +6,8 @@ $(document).ready(function(){
     var optimalMoveCount = Math.pow(2, ($('#tower-one').children().length) ) - 1;
     $('#optimal-count').text('Optimal number of moves: ' + optimalMoveCount);
 
+    console.log('tower three children ' + $('#tower-three').children().length);
+
     var moveCount = 0; // global var tracking move counts
 
     // add and remove the selected class on click
@@ -74,6 +76,8 @@ $(document).ready(function(){
     // uses a recursive algorithm
     $('#auto-solve').click(function(){
 
+        var startTime = Date.now();
+
         var disk = $('#tower-one').children().length;
 
         var one = $('#tower-one');
@@ -83,6 +87,15 @@ $(document).ready(function(){
         hanoi(disk, one, two,three);
 
         function hanoi( disk, src, aux, dst){
+
+            if($('#tower-three').children().length == $('.disk').length){
+                var endTime = Date.now();
+                var seconds = Math.round((endTime - startTime) / 1000);
+                var milliseconds = endTime - startTime;
+                $('#time-elapsed').text('Auto Solve Time: ' + milliseconds +
+                    ' milliseconds ' + '(~ ' + seconds + ' seconds).');
+            }
+
             if(disk > 0){
                 hanoi(disk -1, src, dst, aux);
                 moveDisk( getDisk($(src)), $(src), $(dst) );
@@ -115,11 +128,12 @@ $(document).ready(function(){
             $(this).addClass('selected');
         });
 
-        // reset optimal moves and move count
+        // reset optimal moves, move count, and time elapsed
         optimalMoveCount = Math.pow(2, ($('#tower-one').children().length) ) - 1;
         $('#optimal-count').text('Optimal number of moves: ' + optimalMoveCount);
         moveCount = 0;
         $('#move-count').text('Move Count: ' + moveCount);
+        $('#time-elapsed').text('');
     }
 
 });

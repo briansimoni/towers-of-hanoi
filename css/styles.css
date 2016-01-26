@@ -194,3 +194,8 @@ h1{
 #optimal-count{
     float:right;
 }
+
+#time-elapsed{
+    color:red;
+    font-weight:900;
+}
