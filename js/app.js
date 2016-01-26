@@ -6,8 +6,8 @@ $(document).ready(function(){
     var optimalMoveCount = Math.pow(2, ($('#tower-one').children().length) ) - 1;
     $('#optimal-count').text('Optimal number of moves: ' + optimalMoveCount);
 
+    var moveCount = 0; // global var tracking move counts
 
-    var moveCount = 0;
     // add and remove the selected class on click
     $('.disk').click(function(){
         $('.disk').removeClass('selected');
@@ -15,12 +15,14 @@ $(document).ready(function(){
     });
 
 
+    // invoke game reset, get input from dropdown box.
     $('#reset').click(function(){
         var resetDiskNumber = ($('#thedropdown').val());
         resetGame(resetDiskNumber);
     });
 
 
+    // invokes move disk when you click a tower
     $('.tower').click(function(){
         var clickedTower = $(this);
 
@@ -35,6 +37,7 @@ $(document).ready(function(){
             moveDisk($('.selected'), fromTower, clickedTower);
         }
     });
+
 
     // moves the selected disk to the tower clicked by the user
     function moveDisk(disk, fromTower, toTower){
@@ -95,6 +98,7 @@ $(document).ready(function(){
         return $(towerDisks[0]);
     }
 
+    // reset game function.
     function resetGame(numDisks){
         $('.disk').remove();
 
@@ -105,11 +109,13 @@ $(document).ready(function(){
             $('#tower-one').prepend('<div class="disk disk-' + numbers[i] + '">'+ (i + 1) +'</div>');
         }
 
+        // Need to add the click method back to new nodes
         $('.disk').click(function(){
             $('.disk').removeClass('selected');
             $(this).addClass('selected');
         });
 
+        // reset optimal moves and move count
         optimalMoveCount = Math.pow(2, ($('#tower-one').children().length) ) - 1;
         $('#optimal-count').text('Optimal number of moves: ' + optimalMoveCount);
         moveCount = 0;
