@@ -5,6 +5,7 @@ h1{
 .container{
     border-style: solid;
     border-color: black;
+    margin-bottom:25px;
 }
 
 .towers-container{

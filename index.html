@@ -24,9 +24,9 @@
         <div id="tower-one" class="tower">
             <!--<div class="disk disk-eleven">11</div>-->
             <!--<div class="disk disk-ten">10</div>-->
-            <div class="disk disk-nine">9</div>
-            <div class="disk disk-eight">8</div>
-            <div class="disk disk-seven">7</div>
+            <!--<div class="disk disk-nine">9</div>-->
+            <!--<div class="disk disk-eight">8</div>-->
+            <!--<div class="disk disk-seven">7</div>-->
             <div class="disk disk-six">6</div>
             <div class="disk disk-five">5</div>
             <div class="disk disk-four">4</div>
@@ -52,13 +52,53 @@
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-        <option value="6">6</option>
+        <option selected="selected" value="6">6</option>
         <option value="7">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
         <option value="11">11</option>
     </select>
+
+    <h2>Explanation</h2>
+    <p id="explanation">After you understand the rules, it is clear that to move the disk at the bottom of the stack
+    to the destination tower, you must first move the n-1 disks from the first tower to the extra tower.</p>
+
+    <p>Thus, the steps to move n disks from the first tower to the destination tower are as follows:</p>
+
+    <ol>
+        <li>Move n-1 disks from tower 1 to the extra tower using the destination tower.</li>
+        <li>Move the disk from tower 1 to the destination</li>
+        <li>Move n-1 disks from the extra tower to the destination using tower 1.</li>
+    </ol>
+
+    <p>Using these steps, we can translate that into a recursive algorithm. Here it is in JavaScript:</p>
+
+    <pre>
+        <code>
+            function hanoi(nDisks, source, to, using){
+                if( nDisks > 0 ){
+                    hanoi(nDisks - 1, source, using, to); // step 1
+                    console.log('move disk from ' + source + ' to ' + to); // step 2
+                    hanoi(nDisks - 1, using, to, source); // step 3
+                }
+            }
+        </code>
+    </pre>
+
+    <p>hanoi(3,'A', 'C', 'B');</p>
+
+    <pre>
+        <code>
+            move disk from A to C
+            move disk from A to B
+            move disk from C to B
+            move disk from A to C
+            move disk from B to A
+            move disk from B to C
+            move disk from A to C
+        </code>
+    </pre>
 </div>
 
 
