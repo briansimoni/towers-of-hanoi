@@ -11,7 +11,13 @@ $(document).ready(function(){
     // add and remove the selected class on click
     $('.disk').click(function(){
         $('.disk').removeClass('selected');
-       $(this).addClass('selected');
+        $(this).addClass('selected');
+    });
+
+
+    $('#reset').click(function(){
+        var resetDiskNumber = ($('#thedropdown').val());
+        resetGame(resetDiskNumber);
     });
 
 
@@ -89,13 +95,30 @@ $(document).ready(function(){
         return $(towerDisks[0]);
     }
 
+    function resetGame(numDisks){
+        $('.disk').remove();
+
+        var numbers = ['one','two','three','four','five','six','seven','eight',
+            'nine','ten','eleven'];
+
+        for(var i =0; i < numDisks; i ++){
+            $('#tower-one').prepend('<div class="disk disk-' + numbers[i] + '">'+ (i + 1) +'</div>');
+        }
+
+        $('.disk').click(function(){
+            $('.disk').removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        optimalMoveCount = Math.pow(2, ($('#tower-one').children().length) ) - 1;
+        $('#optimal-count').text('Optimal number of moves: ' + optimalMoveCount);
+        moveCount = 0;
+        $('#move-count').text('Move Count: ' + moveCount);
+    }
+
 });
 
 
-
-function resetGame(numDisks){
-
-}
 
 
 
