@@ -1,6 +1,6 @@
 Towers of Hanoi
 
-On the first day of CMSC 401 (Algorithms With Advanced Data Structures), we had a pop quiz and I realized I still couldn't solve this. So I made this during snowpocalypse 2016.
+On the first day of CMSC 401 (Algorithms With Advanced Data Structures), we had a pop quiz and I realized I still couldn't solve this. So I made this during snowpocalypse 2016. I used some simple HTML, Bootstrap, JavaScript, and JQuery.
 
 To run this, just clone or download the repository and open index.html.
 
