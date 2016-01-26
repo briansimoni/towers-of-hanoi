@@ -76,6 +76,10 @@ $(document).ready(function(){
     // uses a recursive algorithm
     $('#auto-solve').click(function(){
 
+        // reset the game first
+        var resetDiskNumber = ($('#thedropdown').val());
+        resetGame(resetDiskNumber);
+
         var startTime = Date.now();
 
         var disk = $('#tower-one').children().length;
