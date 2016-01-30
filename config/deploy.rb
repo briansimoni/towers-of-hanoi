@@ -3,6 +3,7 @@ lock '3.4.0'
 set :application, 'towers-of-hanoi'
 set :repo_url, 'git@github.com:briansimoni/towers-of-hanoi.git'
 set :branch, 'master'
+set :deploy_via, :remote_cache
 
 # set :application, 'towers-of-hanoi'
 # set :repo_url, 'git@github.com:briansimoni/towers-of-hanoi.git'
