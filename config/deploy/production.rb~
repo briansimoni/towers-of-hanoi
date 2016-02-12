@@ -14,7 +14,7 @@ role :web, %w{ubuntu@52.89.226.17}
 server '52.89.226.17', user: 'ubuntu', roles: %w{web}, my_property: :my_value
 
 set :ssh_options, {
-  keys: %w(~/.ssh/amazon-ssh.pem),
+  keys: %w(~/.ssh/towers_production.pem),
   forward_agent: false,
   # auth_methods: %w(password)
 }

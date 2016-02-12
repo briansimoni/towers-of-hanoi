@@ -1,7 +1,7 @@
-# Load DSL and set up stages
+# Load DSL and Setup Up Stages
 require 'capistrano/setup'
 
-# Include default deployment tasks
+# Includes default deployment tasks
 require 'capistrano/deploy'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
